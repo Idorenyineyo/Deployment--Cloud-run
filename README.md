@@ -17,9 +17,6 @@ gcloud config set compute/region "REGION"
 export LOCATION="REGION"
 ```
 
-📸 *Screenshot: Enabling Cloud Run API*
-![Enable API](screenshots/enable-api.png)
-
 ---
 
 ## ✅ Task 2: Write the Sample Application
@@ -65,8 +62,6 @@ app.listen(port, () => {
 });
 ```
 
-📸 *Screenshot: Sample App Code*
-![Node App Code](screenshots/node-app-code.png)
 
 ---
 
@@ -96,8 +91,6 @@ gcloud container images list
 gcloud auth configure-docker
 ```
 
-📸 *Screenshot: Cloud Build Submitted*
-![Build Success](screenshots/cloud-build-success.png)
 
 ### Test Locally (Cloud Shell)
 
@@ -106,8 +99,6 @@ gcloud auth configure-docker
 docker run -d -p 8080:8080 gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
 ```
 
-📸 *Screenshot: Web Preview*
-![Web Preview](screenshots/web-preview.png)
 
 ---
 
@@ -121,8 +112,6 @@ gcloud run deploy --image gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld \
 
 * You will receive a **Service URL** like: `https://helloworld-xxxxx.a.run.app`
 
-📸 *Screenshot: Service Deployed*
-![Service URL](screenshots/cloud-run-url.png)
 
 ---
 
@@ -136,9 +125,6 @@ gcloud container images delete gcr.io/$GOOGLE_CLOUD_PROJECT/helloworld
 gcloud run services delete helloworld --region=$LOCATION
 ```
 
-📸 *Screenshot: Resource Cleanup*
-![Cleanup](screenshots/cleanup-command.png)
-
 ---
 
 ## 📌 Summary
@@ -151,6 +137,4 @@ This guide demonstrated how to:
 * ✅ Clean up cloud resources
 
 ⚡ Now your app runs **serverlessly** on Cloud Run and scales automatically with demand!
-
-> 📁 For full source code and screenshots, visit this repository.
 
